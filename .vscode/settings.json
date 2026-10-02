@@ -9,6 +9,7 @@
   "editor.tabSize": 2,
   "Lua.diagnostics.globals": [
     "Component",
-    "Controls"
+    "Controls",
+    "Timer"
   ]
 }
