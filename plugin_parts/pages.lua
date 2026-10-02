@@ -1,4 +1,4 @@
-PageNames = { "Main" }  --List the pages within the plugin
+PageNames = { "Controls", "Configuration", "Status" }  --List the pages within the plugin
 
 function GetPages(props)
   local pages = {}
