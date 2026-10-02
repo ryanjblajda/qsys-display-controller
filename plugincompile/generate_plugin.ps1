@@ -56,6 +56,16 @@ function Inline($filePath) {
 
 $result = Inline $Entry
 
+$dirPath = Split-Path -Path $Output -Parent
+
+if (-not (Test-Path -Path $dirPath -PathType Container)) {
+    New-Item -Path $dirPath -ItemType Directory -Force > $null
+}
+
+if (-not (Test-Path -Path $Output -PathType Leaf)) {
+    New-Item -Path $Output -ItemType File > $null
+}
+
 Set-Content $Output $result
 
 Write-Host "Built $Output"
